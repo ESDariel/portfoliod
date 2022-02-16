@@ -1,0 +1,174 @@
+#skills {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  .skills-wrapper {
+    margin-bottom: 15rem;
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
+    }
+
+    .skills-icons {
+      max-width: 40%;
+      min-width: 40%;
+      margin: 0;
+      object-fit: contain;
+
+      @include respond(tab-port) {
+        max-width: 30%;
+        min-width: 30%;
+        margin: 0;
+      } 
+
+      @include respond(phone) {
+        max-width: 30%;
+        min-width: 30%;
+        margin: 0;
+      }
+    }
+
+    .columns {
+      margin-left: -.75rem;
+      margin-right: -.75rem;
+      margin-top: -.75rem;
+    }
+
+    .columns.wrapper-box {
+      background-image: linear-gradient(
+        135deg,
+        #ece9e6 0%,
+        #e1dcd8 20%,
+        #f2f2f2 80%,
+        #ffffff 100%
+      );
+      border-radius: 11px;
+      box-shadow: 0 3px 10px #000;
+    }
+
+    .column {
+      display: block;
+      padding: .75rem;
+      padding-right: 0.75rem;
+    }
+
+    .mt-6 {
+      margin-top: 0.2rem !important;
+
+      @include respond(tab-port) {
+        margin-top: 0.2rem !important
+      } 
+
+      @include respond(phone) {
+        margin-top: 0.2rem !important
+      }
+    }
+
+    .pr-6 {
+      padding-right: 2rem !important;
+    }
+
+    .wrapper-skill {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      @include respond(tab-port) {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+      }
+
+      @include respond(phone) {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+    }
+
+    .skill-col {
+      flex-wrap: wrap;
+      width: 25%;
+
+      @include respond(tab-port) {
+        flex-wrap: wrap;
+        width: 50%;
+      }
+
+      @include respond(phone) {
+        flex-wrap: wrap;
+        width: 60%;
+      }
+    }
+
+    .skill-name {
+      color: #000;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.9rem;
+      text-align: center;
+    }
+
+    /* Pulse */
+    @-webkit-keyframes hvr-pulse {
+      25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+
+      75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes hvr-pulse {
+      25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+
+      75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+      }
+    }
+
+    .hvr-pulse {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+
+    .hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+      background-image: linear-gradient(
+        135deg,
+        #757f9a 0%,
+        #929ab0 20%,
+        #d7dde8 100%
+      );
+      font-weight: 700;
+      border: 1px solid $black-color;
+      -webkit-animation-name: hvr-pulse;
+      animation-name: hvr-pulse;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+  }
+}
